@@ -1,0 +1,14 @@
+
+#+PROJECT NAME: Building a CRM
+
+* create virtual environment
+* Base page / templates
+** create base template
+** create front page
+** create about page
+* Authentication
+** create database model for users
+** Sign up
+** Sign In
+** Log out
+

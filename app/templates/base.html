@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="py-3 px-6 flex justify-between" style="background-color: #3a4664;">
+      <a href="/" class="text-white" href="">E-commerce</a>
+
+        <!-- Left links -->
+        <div class="space-x-2">
+           <a class="text-white" href="{{ url_for('main.about') }}">About</a>
+          <a class="py-2 px-6 bg-gray-500 rounded-xl text-white" href="">Login</a>
+          <a class="py-2 px-6 bg-gray-500 rounded-xl text-white" href="{{ url_for('main.register') }}">Register</a>
+	    </div>
+    </nav>
+    {% block content %}{% endblock %}
+    <footer class="py-8 text-center bg-gray-200">
+      <p class="text-xs text-gray-700">Copyright (c) 2024</p>
+    </footer>
+  </body>
+</html>
