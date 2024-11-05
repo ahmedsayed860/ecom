@@ -1,14 +1,16 @@
 
-#+PROJECT NAME: Building a CRM
+#+PROJECT NAME: Building an e-commerce website
 
-* create virtual environment
+* DONE create virtual environment
 * Base page / templates
-** create base template
-** create front page
-** create about page
+** DONE create base template
+** DONE create register page
+** create login page
+** Create index page
 * Authentication
 ** create database model for users
-** Sign up
-** Sign In
-** Log out
+** Sign up views et forms
+** Sign In views
+** Log out views
+* Dashboard
 

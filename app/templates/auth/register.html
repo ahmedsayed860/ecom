@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<form class="max-w-sm mx-auto" method="POST" action="">
+  {{ form.hidden_tag() }}
+  <div class="mb-5">
+    {{ form.username.label(class="block mb-2 mt-2 text-sm font-meduim") }}
+    {{ form.username(class="block bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-950 w-full p-2.5", placeholder="Ahmed Sayed") }}
+    {% if form.username.errors %}
+      <div class="text-red-600 mt-1">
+        {% for error in form.username.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {{ form.email.label(class="block mb-2 mt-2 text-sm font-meduim") }}
+    {{ form.email(class="block bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-950 w-full p-2.5", placeholder="test@test.com") }}
+    {% if form.email.errors %}
+      <div class="text-red-600 mt-1">
+        {% for error in form.email.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {{ form.passwd.label(class="block mb-2 mt-2 text-sm font-meduim") }}
+    {{ form.passwd(class="block bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-950 w-full p-2.5", placeholder="mot de passe") }}
+    {% if form.passwd.errors %}
+      <div class="text-red-600 mt-1">
+        {% for error in form.passwd.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {{ form.confirm_passwd.label(class="block mb-2 mt-2 text-sm font-meduim") }}
+    {{ form.confirm_passwd(class="block bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-950 w-full p-2.5", placeholder="Confirmation mot de passe") }}
+    {% if form.confirm_passwd.errors %}
+      <div class="text-red-600 mt-1">
+        {% for error in form.confirm_passwd.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {{ form.submit(class="mt-2 py-2 px-6 rounded-full text-white text-center", style="background-color: #3a4664;")}}
+  </div>
+
+</form>
+
+{% endblock %}

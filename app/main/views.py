@@ -3,14 +3,9 @@ from flask import Blueprint, render_template
 
 main = Blueprint('main', __name__)
 
-@main.route('/')
+@main.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
-
-
-@main.route('/register')
-def register():
-    return render_template('register.html')
 
 
 @main.route('/about')
