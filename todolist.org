@@ -1,0 +1,19 @@
+
+#+PROJECT NAME: Building an e-commerce website
+
+* DONE create virtual environment
+* Base page / templates
+** DONE create base template
+** DONE create register page
+** create login page
+** Create index page
+* Authentication
+** create database model for users
+** DONE Sign up views, forms & models
+** Sign In views, forms & models
+** Log out views
+* Dashboard
+* Database
+** Auth DB 
+** Products
+** 
